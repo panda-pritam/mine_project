@@ -43,7 +43,7 @@ function App() {
         <button type="submit">submit</button>
         <br />
       </form>
-      {fullname.length > 0 ? fullname : ""}
+      {fullname.length > 0 ? <p>{fullname}</p> : ""}
     </div>
   );
 }
