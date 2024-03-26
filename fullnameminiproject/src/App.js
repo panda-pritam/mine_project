@@ -39,7 +39,9 @@ function App() {
         value={name.lastName}
       />
       <br />
-      <input type="submit" value="submit" onClick={onSubmitHandler} />
+      <button type="submit" value="submit" onClick={onSubmitHandler}>
+        submit
+      </button>
       <br />
       {fullname.length > 0 ? <h1>{fullname}</h1> : ""}
     </form>
