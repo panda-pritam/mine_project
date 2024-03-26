@@ -163,7 +163,7 @@ function App() {
         >
           0
         </button>
-        <button type="submit" className="btn" onSubmit={onSubmitHandler}>
+        <button type="button" className="btn" onClick={onSubmitHandler}>
           =
         </button>
         <button
