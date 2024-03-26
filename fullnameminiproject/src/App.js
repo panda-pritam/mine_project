@@ -14,7 +14,7 @@ function App() {
   let onSubmitHandler = (e) => {
     e.preventDefault();
     if (name) {
-      setFullname(`Full Name: ${name.firstName}${name.lastName}`);
+      setFullname(`Full Name: ${name.firstName} ${name.lastName}`);
     }
   };
 
@@ -41,7 +41,8 @@ function App() {
       <br />
       <button type="submit">submit</button>
       <br />
-      {fullname.length > 0 ? fullname : ""}
+
+      <p> {fullname.length > 0 ? fullname : ""}</p>
     </form>
   );
 }
