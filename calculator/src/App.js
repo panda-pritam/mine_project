@@ -16,10 +16,10 @@ function App() {
       if (equation === "0/0") {
         setResult("NaN");
         return;
+      } else if (equation.length === 0) {
+        setResult("Error");
+        return;
       }
-      // else if (equation.substring(0, 3) === "0/") {
-      //   return;
-      // }
       let val = eval(equation);
       setResult(val);
     } catch (error) {
