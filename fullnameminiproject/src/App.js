@@ -12,14 +12,14 @@ function App() {
     console.log(name);
   };
   let onSubmitHandler = (e) => {
-    //e.preventDefault();
+    e.preventDefault();
     if (name) {
       setFullname(`Full Name: ${name.firstName} ${name.lastName}`);
     }
   };
 
   return (
-    <form>
+    <form onSubmit={onSubmitHandler}>
       <h1>Full Name Display</h1>
       <label htmlFor="firstName">First Name: </label>
       <input
@@ -39,9 +39,7 @@ function App() {
         required
       />
       <br />
-      <button type="submit" onClick={onSubmitHandler}>
-        submit
-      </button>
+      <button type="submit">submit</button>
       <br />
       {fullname.length > 0 ? <h1>{fullname}</h1> : ""}
     </form>
