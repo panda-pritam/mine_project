@@ -24,4 +24,9 @@
   height: 40px;
 }
 .output {
+  opacity: 80%;
+  margin: 1rem;
+  color: black;
+  font-size: 30px;
+  font-weight: 600;
 }

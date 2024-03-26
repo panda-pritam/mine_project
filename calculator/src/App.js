@@ -12,8 +12,19 @@ function App() {
   };
   let onSubmitHandler = (e) => {
     e.preventDefault();
-    let val = eval(equation);
-    setResult(val);
+    try {
+      if (equation === "0/0") {
+        setResult("NaN");
+        return;
+      }
+      // else if (equation.substring(0, 3) === "0/") {
+      //   return;
+      // }
+      let val = eval(equation);
+      setResult(val);
+    } catch (error) {
+      setResult("Error");
+    }
   };
   let clearText = () => {
     setResult("");
@@ -22,8 +33,14 @@ function App() {
   return (
     <div className="mainDiv">
       <h1>React Calculator</h1>
-      <input value={equation} className="result" />
-      {result ? <h2 className="output">{result}</h2> : ""}
+      <input
+        value={equation}
+        className="result"
+        onChange={(e) => {
+          setEquation(e.target.value);
+        }}
+      />
+      {result ? <div className="output">{result}</div> : ""}
       <form onSubmit={onSubmitHandler} className="btnDiv">
         <button id="7" value="7" onClick={onClickHandler} className="btn">
           7
