@@ -8,7 +8,7 @@ function App() {
   let onChangeHandler = (e) => {
     let newObj = { ...name };
     newObj[e.target.id] = e.target.value;
-    setName(newObj);
+    setName((prev) => newObj);
     console.log(name);
   };
   let onSubmitHandler = (e) => {
@@ -43,7 +43,7 @@ function App() {
         <button type="submit">submit</button>
         <br />
       </form>
-      {fullname.length > 0 ? fullname : ""}
+      <p>{fullname.length > 0 ? fullname : ""}</p>
     </div>
   );
 }
