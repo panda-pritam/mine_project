@@ -3,7 +3,10 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  let [name, setName] = useState("");
+  let [name, setName] = useState({
+    firstName: "",
+    lastName: "",
+  });
   let [fullname, setFullname] = useState("");
   let onChangeHandler = (e) => {
     let newObj = { ...name };
@@ -14,7 +17,7 @@ function App() {
   let onSubmitHandler = (e) => {
     e.preventDefault();
     if (name) {
-      setFullname(`Full Name:${name.firstName} ${name.lastName}`);
+      setFullname(`Full Name: ${name.firstName} ${name.lastName}`);
     }
   };
 
