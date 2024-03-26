@@ -79,7 +79,7 @@ function App() {
           *
         </button>
         <button type="reset" className="btn" onClick={clearText}>
-          c
+          C
         </button>
         <button id="0" value="0" onClick={onClickHandler} className="btn">
           0
